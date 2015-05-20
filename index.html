@@ -1,269 +1,667 @@
-
-<html>
+﻿
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Resume :: Arun Raj</title>
-    <style type="text/css">
-        * {
-            margin: 0px;
-            padding: 0px;
-            border: 0px;
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arun Raj </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+        @charset "utf-8";
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+
+        @-ms-viewport {
+            width: device-width;
         }
 
-        .clear {
-            clear: both;
+        @-o-viewport {
+            width: device-width;
         }
 
-        hr {
-            border: solid 1px #EFEFEF;
+        @viewport {
+            width: device-width;
         }
 
-        p {
-            font-family: 'Open Sans', Arial, sans-serif;
-            font-size: 10px;
-            color: #444;
+        body {
+            font-family: 'Open Sans',Arial,Tahoma;
+            font-weight: 400;
+            font-size: 1em;
+            color: #363636;
+            background: #ededed;
         }
 
-        .wrapper {
-            border: solid 10px #FFF;
-            border-top: none;
-            padding: 0 50px;
-            width: 700px;
+        .container {
+            margin-top: 80px;
+            margin-bottom: 15px;
+            background: #fff;
         }
 
-        .wrapper-top-bar {
-            background-color: #fdb020;
-            height: 10px;
-            width: 100%;
-            display: block;
-            margin-bottom: 20px;
+        #photo-header {
+            margin-top: -75px;border-bottom: dashed 1px #E2E2E2;
         }
 
-        .user-profile {
-            width: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-
-        .user-profile-basic {
-            width: 60%;
-            float: left;
-        }
-
-        .user-profile-img {
-            float: left;
+        #photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
             padding: 5px;
-            border: solid 1px #F0F0F0;
-            height: 150px;
-            width: 150px;
+            background: #ededed;
+            display: inline-block;
         }
 
-            .user-profile-img > img {
-                width: 100%;
-                height: 100%;
+            #photo img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
             }
 
-        .name-desg {
-            float: left;
-            margin-left: 20px;
-            padding-top: 50px;
+        #text-header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 2.4em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -1px;
         }
 
-        .user-profile-basic h1 {
-            color: #444;
-        }
-
-        .user-profile-basic h3 {
-            color: #666;
-        }
-
-        .user-links {
-            float: left;
-            width: 40%;
-        }
-
-            .user-links > ul {
-                list-style: none;
+            #text-header h1::first-line {
+                font-size: 1.5em;
+                letter-spacing: -4px;
+                font-weight: 800;
+                line-height: 1.5em;
             }
 
-                .user-links > ul > li {
-                    clear: both;
+            #text-header h1 span {
+                color: #3DBAF0;
+            }
+
+            #text-header h1 sup {
+                opacity: .5;
+            }
+
+        #text-header:after {
+            width: 100%;
+            height: 3px;
+            background: url(../img/line.png);
+            margin-top: 15px;
+            content: '';
+            display: block;
+        }
+
+        .box {
+            margin-bottom: 15px;
+        }
+
+            .box h2 {
+                color: #2085B0;
+                font-size: 1.8em;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+                .box h2:before {
+                    content: '//';
+                    margin-right: 5px;
                 }
 
-                    .user-links > ul > li > a {
-                        float: right;
-                        text-decoration: none;
-                        color: #444;
-                        margin: 10px 0px;
-                        color: #555C90;
-                        font-size: 9px;
-                        font-family: cursive;
-                    }
-
-        .icn {
-            width: 20px;
-            height: 20px;
-            float: right;
-            margin: 5px 10px;
-        }
-
-            .icn > img {
-                height: 24px;
-                width: 24px;
+            .box p {
+                font-size: 1.3em;
+                line-height: 1.5em;
             }
 
-        .cv-section {
-            border-top: 1px solid #dadada;
-            padding: 65px 0;
+        #education {
+            margin-top: 20px;
+            position: relative;
+            padding: 1em 0;
+            list-style: none;
         }
 
-        .span3 {
-            float: left;
-            width: 25%;
-        }
-
-        .span9 {
-            float: left;
-            width: 75%;
-        }
-
-        .cv-section-title > h2 {
-            color: #B1B1B1;
-            font-size: 14px;
-            font-stretch: normal;
-            font-style: normal;
-            font-variant: normal;
-        }
-
-        .company-item {
-            background: rgb(249, 249, 249);
-            padding: 5px;
-        }
-
-            .company-item:nth-child(even) {
-                background: rgb(255, 255, 255);
+            #education:before {
+                width: 5px;
+                height: 100%;
+                position: absolute;
+                left: 25px;
+                top: 0;
+                content: ' ';
+                display: block;
+                background: #ec7263;
+                background: -moz-linear-gradient(top,#fff 0,#ec7263 7%,#ec7263 89%,#fff 100%);
+                background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(7%,#ec7263),color-stop(89%,#ec7263),color-stop(100%,#fff));
+                background: -webkit-linear-gradient(top,#fff 0,#ec7263 7%,#ec7263 89%,#fff 100%);
+                background: -o-linear-gradient(top,#fff 0,#ec7263 7%,#ec7263 89%,#fff 100%);
+                background: -ms-linear-gradient(top,#fff 0,#ec7263 7%,#ec7263 89%,#fff 100%);
+                background: linear-gradient(to bottom,#fff 0,#00B3FF 7%,#2085B0 89%,#fff 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
             }
 
-        sapn.company-name {
-            font-size: 12px;
-            font-weight: bold;
-            font-family: sans-serif;
+            #education li {
+                width: 100%;
+                z-index: 2;
+                position: relative;
+                float: left;
+            }
+
+            #education .year {
+                width: 10%;
+                background: #fff;
+                padding: 10px;
+                font-size: 1.5em;
+                font-weight: 700;
+                display: inline-block;
+            }
+
+            #education .description {
+                width: 80%;
+                display: inline-block;
+                background: #eee;
+                margin-bottom: 10px;
+                position: relative;
+                padding: 10px 10px 0;
+                border-bottom: 1px solid #ddd;
+            }
+
+                #education .description:after {
+                    content: '';
+                    position: absolute;
+                    top: 15px;
+                    right: 0;
+                    left: -16px;
+                    height: 0;
+                    width: 0;
+                    border: solid transparent;
+                    border-right-color: #eee;
+                    border-width: 8px;
+                    pointer-events: none;
+                }
+
+                #education .description h3 {
+                    font-size: 1.6em;
+                    margin: 0;
+                    padding: 0;
+                    font-weight: 700;
+                }
+
+                #education .description p {
+                    font-size: 1.3em;
+                    margin-top: 5px;
+                    padding: 0;
+                }
+
+        .job {
+            margin-bottom: 15px;
         }
 
-        span.company-period {
-            float: right;
-            font-style: oblique;
-            font-size: 8px;
-            color: #303030;
+            .job .where {
+                font-size: 1.4em;
+                font-weight: 700;
+            }
+
+            .job .year {
+                font-size: 1.3em;
+                opacity: .7;
+            }
+
+            .job .profession {
+                font-size: 1.6em;
+                font-weight: 700;
+            }
+
+            .job .description {
+                font-size: 1.2em;
+                line-height: 1.5em;
+            }
+
+        .contact-item {
+            width: 100%;
+            float: left;
         }
 
-        span.company-desg {
+            .contact-item .icon {
+                padding: 10px;
+                border-right: 1px solid #aaa;
+                border-bottom: 1px solid #aaa;
+                opacity: .2;
+            }
+
+            .contact-item:last-child .icon {
+                border-bottom: none;
+            }
+
+            .contact-item .fa {
+                font-size: 2em;
+            }
+
+            .contact-item .title {
+                width: 80%;
+                width: calc(100% - 55px);
+                font-size: 1.5em;
+                font-weight: 700;
+                opacity: .9;
+            }
+
+                .contact-item .title.only {
+                    margin-top: 10px;
+                }
+
+            .contact-item .description {
+                width: 80%;
+                width: calc(100% - 55px);
+                font-size: 1.2em;
+                opacity: .7;
+            }
+
+        .item-skills {
+            height: 30px;
+            background: #3DBAF0;
+            color: #fff;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .skills-legend {
+            margin-top: 20px;
+            opacity: .8;
+        }
+
+            .skills-legend:before {
+                width: 100%;
+                height: 3px;
+                position: relative;
+                content: ' ';
+                display: block;
+                margin-bottom: -13px;
+                background: #c6c6c6;
+            }
+
+            .skills-legend div {
+                width: 25%;
+                display: inline-block;
+                font-size: 1.2em;
+                color: #a9a9a9;
+                float: left;
+            }
+
+        .legend:before {
+            width: 3px;
+            height: 10px;
+            position: relative;
+            content: ' ';
             display: block;
-            font-size: 10px;
-            color: #555;
-            font-weight: bold;
+            margin: auto auto 15px;
+            background: #c6c6c6;
         }
+
+        .legend-left.legend:before {
+            margin-left: 0;
+        }
+
+        .legend-right.legend:before {
+            margin-right: 0;
+        }
+
+        .legend-left:nth-child(2) span {
+            margin-left: -25px;
+        }
+
+        .legend-right:nth-child(3) span {
+            margin-right: -20px;
+        }
+
+        .legend-right {
+            text-align: right;
+        }
+
+        #language-skills .skill {
+            font-size: 1.3em;
+            margin: 10px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+            #language-skills .skill .icons {
+                width: 111px;
+                height: 14px;
+                background: url(../img/star-grey.png) no-repeat;
+            }
+
+            #language-skills .skill .icons-red {
+                background: url(../img/star-red.png) no-repeat;
+            }
+
+        .hobby {
+            color: #fff;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            padding: 5px 5px 5px 25px;
+            background: #A75265;
+            position: relative;
+            font-size: 1.2em;
+        }
+
+            .hobby:before {
+                content: "\f004";
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: 400;
+                position: absolute;
+                top: 6px;
+                left: 7px;
+            }
+
+        @media (min-width:500px) {
+            #education .description {
+                width: 85%;
+            }
+        }
+
+        @media (min-width:768px) {
+            #education .description {
+                width: 85%;
+            }
+        }
+
+        @media (min-width:992px) {
+            #education .description {
+                width: 87%;
+            }
+        }
+
+        @media (min-width:1200px) {
+            #education .description {
+                width: 90%;
+            }
+        }
+
+        ul.projects {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            /* font-size: 13px; */
+            /* font-weight: 700; */
+            /* font-family: 'Open Sans'; */
+        }
+
+        span.project-title {
+            font-size: 13px;
+            font-weight: 700;
+            font-family: 'Open Sans';
+        }
+
+        ul.project-skills {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        ul.project-skills {
+        }
+
+            ul.project-skills li {
+                display: inline-block;
+                background-color: #3DCEF0;
+                padding: 3px 5px;
+                color: #FFF;
+                font-size: 10px;
+                font-weight: 700;
+                margin: 1px;
+                border-radius: 5px;
+            }
+            .projects > li:after {
+    border-bottom: dashed 1px #EAEAEA;
+    display: block;
+    height: 5px;
+    content: " ";
+}
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="wrapper-top-bar"></div>
-        <div class="user-profile">
-            <div class="user-profile-basic">
-                <div class="user-profile-img">
-                    <img src="https://musthaan.files.wordpress.com/2011/05/531087_305471046218376_695736942_n.jpg" />
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="photo-header" class="text-center">
+                    <div id="photo">
+                        <img src="https://musthaan.files.wordpress.com/2011/05/531087_305471046218376_695736942_n.jpg?w=150&h=150" alt="avatar">
+                    </div>
+                    <div id="text-header">
+                        <h1>Hello,<br> my name is <span>Arun Raj</span> and this is my resume</h1>
+                    </div>
                 </div>
-                <div class="name-desg">
-                    <h1 class="user-name">Arun Raj</h1>
-                    <h3>Software Engineer</h3>
-                </div><div class="clear"></div>
             </div>
-            <div class="user-links">
-                <ul>
-
-                    <li>
-                        <div class="icn"><img src="http://icons.iconarchive.com/icons/cheezen/web-2/24/gmail-icon.png" alt="" height="20" width="20" /></div>
-                        <a href="#">arunrajptb@gmail.com</a>
-                    </li>
-                    <li>
-                        <div class="icn">
-                            <img src="https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-2/512/iphone_apple_phone_icon_mobile-24.png" alt="" height="20" width="20" />
-                        </div>
-                        <a href="#">8907676566</a>
-                    </li>
-                    <li>
-                        <div class="icn"><img src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-01-24.png" alt="" height="20" width="20" /></div>
-                        <a href="#">http://musthaan.com</a>
-                    </li>
-                    <li>
-                        <div class="icn"><img src="https://www.wra.org/uploadedImages/Images/Shared_Images/icons/linkedin_icon.png" alt="" height="20" width="20" /></div>
-                        <a href="#">https://in.linkedin.com/in/zarunraj</a>
-                    </li>
-                    <li>
-                        <div class="icn"><img src="https://www.fullcontact.com/wp-content/themes/fullcontact/assets/images/social/stackoverflow.png" alt="" height="20" width="20" /></div>
-                        <a href="#">http://stackoverflow.com/users/1277945</a>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="clear"></div>
         </div>
-
-        <hr>
-
-        <div class="row cv-section">
-            <div class="span3">
-
-                <div class="cv-section-title">
-
-                    <h2>Profesional Profile</h2>
-
-                </div><!-- end .cv-section-title -->
-
-            </div><!-- end .span3 -->
-            <div class="span9">
-
-                <div class="cv-item">
-<p>I am an enthusiastic person, trying to achieve a challenging career in the IT industry where I can increase my potential thereby contributing immensely to this field while being resourceful, innovative and flexible.</p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-7">
+                <!-- ABOUT ME -->
+                <div class="box">
+                    <h2>About Me</h2>
                     <p>
-                        Seeking a challenging position in design & development of IT enabled applications, for utilizing my strengths & capabilities for the organization’s growth and to have more exposure for learning.
-                        .
+                        I have over 5 years of software development experience in IT industry. Successfully implemented more than 15 software projects, participating in full project life cycle. These were commercial projects, business applications with Client-Server and Web technologies, with complexity is varying from simple websites to complex web portals / desktop / real-time solutions, mobile telecommunication services.
+                    </p>  <p>
+                        I'm result oriented, self-motivated with a big experience in various types of projects on ASP.NET platform from web services to complicated commercial projects. I have got strong skills in a number of technologies such as JQuery,CSS, C#, VB.NET, .NET, ADO.NET,Entityframework, SQL (T-SQL, PL/SQL) but especially in ASP.NET and MS SQL.
                     </p>
+                </div>
+              
+                <!-- EXPERIENCES -->
+                <div class="box">
+                    <h2>Experiences</h2>
+                    <div class="job clearfix">
+                        <div class="col-xs-3">
+                            <div class="where">Orion India Systems </div>
+                            <div class="year">May 2014 - Present</div>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="profession">Software Engineer</div>
+                            <ul class="projects">
+                                <li>
+                                    <span class="project-title">ALex</span><div class="description">Converting full featured (Sales, Stock, Payroll, etc)EPR Windows application to Web application.</div>
+                                    <ul class="project-skills">
+                                        <li>C#</li>
+                                        <li>ASP.Net</li>
+                                        <li>SQL Server</li>
+                                        <li>XML</li>
+                                        <li>JQuery</li>
+                                        <li>CSS</li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="job clearfix">
+                        <div class="col-xs-3">
+                            <div class="where">Nuevalgo Solutions</div>
+                            <div class="year">Mar 2013 - May 2014</div>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="profession">Tech Lead</div>
+                            <ul class="projects">
+                                <li>
+                                    <span class="project-title">Task Forces</span><div class="description">Converting full featured (Sales, Stock, Payroll, etc)EPR Windows application to Web application.</div>
+                                    <ul class="project-skills">
+                                        <li>C#</li>
+                                        <li>ASP.Net</li>
+                                        <li>SQL Server</li>
+                                        <li>EF</li>
+                                        <li>JQuery</li>
+                                        <li>Bootstrap</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="project-title">Tadawulco CRM</span><div class="description">It's a CRM application developed for real estate domain. Its main features are lead, Task, activities, properties and admin</div>
+                                    <ul class="project-skills">
+                                        <li>C#</li>
+                                        <li>ASP.Net</li>
+                                        <li>EF</li>
+                                        <li>JQuery</li>
+                                        <li>Bootstrap</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="job clearfix">
+                        <div class="col-xs-3">
+                            <div class="where">Solutech Softwares </div>
+                            <div class="year">July 2011 - Dec 2012</div>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="profession">Web Developer</div>
+                            <ul class="projects">
+                                <li>
+                                    <span class="project-title">Drug Registration and Pricing System</span><div class="description">The Registration and Drug Control Department (RDCD) in MOH would       like to fully automate all the daily processes and procedures for faster decisions; easy retrieval of information and meeting its objectives &
 
+goals.</div>
+                                    <ul class="project-skills">
+                                        <li>VB.Net</li>
+                                        <li>ASP.Net</li>
+                                        <li>SQL Server</li>
+                                        <li>ADO.Net</li>
+                                        <li>Telerik</li>
+                                        <li>JavaScript</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="project-title">Smart Time Supreme</span><div class="description">World class time attendance software designed for real-time, editable
+and customizable attendance management. Integrated with payroll
+software. Supports multiple Time Attendance Devices, Overtime
+Management, and Employee Scheduling.</div>
+                                    <ul class="project-skills">
+                                        <li>VB.Net</li>
+                                        <li>ASP.Net</li>
+                                        <li>SQL Server</li>
+                                        <li>ADO.Net</li>
+                                        <li>Telerik</li>
+                                        <li>JavaScript</li>
+                                    </ul>
+                                </li>
+                            </ul> </div>
+                    </div>
+                    <div class="job clearfix">
+                        <div class="col-xs-3">
+                            <div class="where">Softech Infosystems</div>
+                            <div class="year">Nov 2009 - Jun 2011</div>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="profession">Software Programer</div>
+                            <ul class="projects">
+                                <li>
+                                    <span class="project-title">D4Deal.com</span><div class="description">It’s a full automation of a Multi Level Marketing Company.</div>
+                                    <ul class="project-skills">
+                                        <li>C#</li>
+                                        <li>ASP.Net</li>
+                                        <li>SQL Server</li> 
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="project-title">AccoSoft</span><div class="description">It’s a customized Inventory Software for wholesale and retail dealers.</div>
+                                    <ul class="project-skills">
+                                        <li>VB.Net</li>
+                                        <li>ADO.Net</li>
+                                        <li>SQL Server</li>
+                                    </ul>
+                                </li>
+                            </ul>  </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+                <!-- CONTACT -->
+                <div class="box clearfix">
+                    <h2>Contact</h2>
+                    <div class="contact-item">
+                        <div class="icon pull-left text-center"><span class="fa fa-phone fa-fw"></span></div>
+                        <div class="title only pull-right">+91 8907676566</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon pull-left text-center"><span class="fa fa-envelope fa-fw"></span></div>
+                        <div class="title only pull-right">arunrajptb@gmail.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon pull-left text-center"><span class="fa fa-stack-overflow fa-fw"></span></div>
+                        <div class="title pull-right">Stack Overflow</div>
+                        <div class="description pull-right">http://stackoverflow.com/users/1277945/musthaan</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon pull-left text-center"><span class="fa fa-wordpress fa-fw"></span></div>
+                        <div class="title pull-right">Blog</div>
+                        <div class="description pull-right">https://musthaan.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon pull-left text-center"><span class="fa fa-skype fa-fw"></span></div>
+                        <div class="title pull-right">Skype</div>
+                        <div class="description pull-right">Zarunraj</div>
+                    </div>
+                </div>
+                <!-- SKILLS -->
+                <div class="box">
+                    <h2>Skills</h2>
+                    <div class="skills">
+                        <div class="item-skills" data-percent="0.90">ASP.Net</div>
+                        <div class="item-skills" data-percent="0.90">SQL</div>
+                        <div class="item-skills" data-percent="0.80">C#</div>
+                        <div class="item-skills" data-percent="0.70">MVC4</div>
+                        <div class="item-skills" data-percent="0.70">jQuery</div>
+                        <div class="item-skills" data-percent="0.60">CSS</div>
+                        <div class="skills-legend clearfix">
+                            <div class="legend-left legend">Beginner</div>
+                            <div class="legend-left legend"><span>Proficient</span></div>
+                            <div class="legend-right legend"><span>Expert</span></div>
 
-
-                </div><!-- end .cv-item -->
-
-            </div><!-- end .span9 -->
-        </div>
-        <div class="row cv-section">
-            <div class="span3">
-
-                <div class="cv-section-title">
-
-                    <h2>Professional Experience</h2>
-
-                </div><!-- end .cv-section-title -->
-
-            </div><!-- end .span3 -->
-            <div class="span9">
-
-                <div class="cv-item">
-
-                    <div class="company-item"><sapn class="company-name">Orion India Systems</sapn><span class="company-period">May 2014 - Present</span><span class="company-desg">Software Engineer</span>
-                    <ul class="projects">
-                        <li><span class="project-title">ALex</span>
-                        
+                        </div>
+                    </div>
+                </div>
+                <!-- EDUCATION -->
+                <div class="box">
+                    <h2>Education</h2>
+                    <ul id="education" class="clearfix">
+                        <li>
+                            <div class="year pull-left">69%</div>
+                            <div class="description pull-right">
+                                <h3>Diploma in Computer Engg.</h3>
+                                <p><i>[2006 - 2009]</i>  IPT & GPT College Shoranur, Palakkad.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="year pull-left">74%</div>
+                            <div class="description pull-right">
+                                <h3>Secondary school</h3>
+                                <p><i>[2003 - 2006]</i>  GHSS Pattambi, Palakkad.</p>
+                            </div>
                         </li>
                     </ul>
+                </div>
+                <!-- LANGUAGES -->
+                <div class="box">
+                    <h2>Languages</h2>
+                    <div id="language-skills">
+                        <div class="skill">English <div class="icons pull-right"><div style="width: 60%;" class="icons-red"></div></div></div>
+                        <div class="skill">Tamil <div class="icons pull-right"><div style="width: 70%;" class="icons-red"></div></div></div>
+                        <div class="skill">Malayalam <div class="icons pull-right"><div style="width: 98%;" class="icons-red"></div></div></div>
                     </div>
-                    <div class="company-item"><sapn class="company-name">Nuevalgo</sapn><span class="company-period">March 2013 - May 2014</span><span class="company-desg">Team Lead</span></div>
-
-
-
-                </div><!-- end .cv-item -->
-
-            </div><!-- end .span9 -->
+                </div>
+                <!-- HOBBIES -->
+                <div class="box">
+                    <h2>Hobbies</h2>
+                    <div class="hobby">Photography</div>
+                    <div class="hobby">Bike Ride</div>
+                    <div class="hobby">Reading</div>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- JQUERY -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- SCRIPTS -->
+    <script>var callback = function () { $(".item-skills").each(function () { newWidth = $(this).parent().width() * $(this).data("percent"), $(this).width(0), $(this).animate({ width: newWidth }, 1e3) }), $(".icons-red").each(function () { height = $(this).height(), $(this).animate({ height: 14 }, 2e3) }) }; $(document).ready(callback); var resize; window.onresize = function () { clearTimeout(resize), resize = setTimeout(function () { callback() }, 100) };</script>
 </body>
 </html>
