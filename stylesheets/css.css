@@ -85,12 +85,13 @@ body {
     #text-header h1 sup {
         opacity: .5;
     }
-
+#text-header> h6{margin: 0; padding: 0;}
+#text-header>h6>a{color:#5b5548;}
 #text-header:after {
     width: 100%;
     height: 3px;
     background: url(../img/line.png);
-    margin-top: 15px;
+    margin-top: 0px;
     content: '';
     display: block;
 }
@@ -298,7 +299,7 @@ body {
     }
 
     .skills-legend div {
-        width: 25%;
+        width: 32%;
         display: inline-block;
         font-size: 1.2em;
         color: #a9a9a9;
@@ -508,5 +509,6 @@ ul.project-skills {
     .hobby:before{color: #fff!important;}
     .wrapper{background: #ededed!important;position: absolute!important;}
     .container {    background: #fff!important;}
+    #text-header>h6>a:after{content:'';}
 }
 .wrapper{background: #ededed!important;position: absolute;}
