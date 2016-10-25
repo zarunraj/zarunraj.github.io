@@ -54,6 +54,9 @@ body {
 }
 
 @media print {
+    #photo-header {
+    margin-top: 0px; 
+}
 }
 
 #photo img {
