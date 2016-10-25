@@ -54,9 +54,7 @@ body {
 }
 
 @media print {
-    #photo-header {
-    margin-top: 0px; 
-}
+     
 }
 
 #photo img {
@@ -513,6 +511,6 @@ ul.project-skills {
     .wrapper{background: #ededed!important;position: absolute!important;}
     .container {    background: #fff!important;}
     #text-header>h6>a:after{content:'';}
-    .container{margin-top: 0;}
+     
 }
 .wrapper{background: #ededed!important;position: absolute;width:100%;}
